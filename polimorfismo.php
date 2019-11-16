@@ -48,4 +48,3 @@ echo "Al Ferrari del usuario 2 le quedan " . $coche2->getNafta() . " litros de n
 
 
 include 'vistas/pie.php';
-?>
