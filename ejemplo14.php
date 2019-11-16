@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-=======
->>>>>>> bf4e4cd09e79efd42c6dddcbf91dbb0a845d1d12
 include 'vistas/cabecera.php';
 include 'clases/MiNamespace.php';
 
