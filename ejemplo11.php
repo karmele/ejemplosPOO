@@ -3,11 +3,13 @@
 // Clase con un método final 
 // sirve para indicar que no puede ser reemplazado 
 
-class MiClaseMetodoFinal {
+class MiClaseMetodoFinal
+{
 
     public $saludo;
 
-    final function saludar() {
+    final function saludar()
+    {
         echo $this->saludo . "<br />";
     }
 
@@ -16,16 +18,19 @@ class MiClaseMetodoFinal {
 // Subclase o clase derivada
 //Pero no se puede implementar un método definido como final
 
-class MiSubClase extends MiClaseMetodoFinal {
+class MiSubClase extends MiClaseMetodoFinal
+{
 
     public $despedida;
 
     // la definición de este método produce un error fatal
-    function saludar() {
+    function saludar()
+    {
         echo $this->saludo . "<br />";
     }
 
-    function despedirse() {
+    function despedirse()
+    {
         echo $this->despedida . "<br />";
     }
 

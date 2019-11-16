@@ -3,7 +3,8 @@
 // El modo de hacerlo sin __autoload() es con include:
 //include "Personas.php";
 
-function __autoload($varClase) {
+function __autoload($varClase)
+{
 
     // con esteechoveremos cuántas veces se invoca al
     // método autoload()
@@ -22,6 +23,7 @@ function __autoload($varClase) {
         include $varClase . ".php";
     }
 }
+
 include 'vistas/cabecera.php';
 echo "Ejemplo del método mágico __autoload() <br /><br />";
 // la clase Persona no está declarada dentro de la 

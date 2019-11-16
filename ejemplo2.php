@@ -1,18 +1,25 @@
 <?php
+
 // clase simple para crear una tabla HTML 
-Class MiTablaHTML {
+Class MiTablaHTML
+{
+
     private $texto;
-    
-    function __construct($var) {
+
+    function __construct($var)
+    {
         $this->texto = $var;
     }
 
-    public function imprimir(){
+    public function imprimir()
+    {
         print("<table border='3'><tr><td>");
         print($this->texto);
         print("</td></tr></table>");
     }
+
 }
+
 include 'vistas/cabecera.php';
 // crea una instancia del objeto
 $obj = new MiTablaHTML("texto para colocar en la tabla");
@@ -20,7 +27,7 @@ $obj = new MiTablaHTML("texto para colocar en la tabla");
 $obj->imprimir();
 
 //lo mismo
-$obj= new MiTablaHTML("El texto de la tabla");
+$obj = new MiTablaHTML("El texto de la tabla");
 $obj->imprimir();
 
 

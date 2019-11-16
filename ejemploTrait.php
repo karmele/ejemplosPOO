@@ -1,52 +1,65 @@
 <?php
+
 // Según el orden de precedencia los métodos de la clase actual 
 // sobrescriben los métodos del Trait, a la vez que el Trait 
 // sobrescribe los métodos de la clase base. 
-trait Comunicacion {
+trait Comunicacion
+{
 
-    function decirHola() {
+    function decirHola()
+    {
         return "Hola";
     }
 
-    function decirQueTal() {
+    function decirQueTal()
+    {
         return "¿Qué tal? Soy un trait";
     }
 
-    function decirHolaYQuetal() {
+    function decirHolaYQuetal()
+    {
         return $this->decirHola() . " " . $this->decirQueTal();
     }
 
-    function preguntarEstado() {
+    function preguntarEstado()
+    {
         return $this->decirHola() . " " . parent::decirQueTal();
     }
 
-    function decirBien() {
+    function decirBien()
+    {
         return "Bien, desde el Trait Comunicación";
     }
 
 }
 
-class Estado {
+class Estado
+{
 
-    function decirQueTal() {
+    function decirQueTal()
+    {
         return "¿Qué tal? Soy Estado";
     }
 
-    function decirBien() {
+    function decirBien()
+    {
         return "Bien, desde la clase Estado";
     }
 
 }
 
-class Comunicar extends Estado {
+class Comunicar extends Estado
+{
 
     use Comunicacion;
 
-    function decirQueTal() {
+    function decirQueTal()
+    {
         return "¿Qué tal? Soy Comunicar";
     }
 
 }
+
 include 'vistas/cabecera.php';
 $a = new Comunicar;
 echo $a->decirHolaYQuetal() . "<br>"; // Devuelve: Hola ¿Qué tal? Soy Comunicar

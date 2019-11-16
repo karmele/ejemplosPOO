@@ -1,12 +1,14 @@
 <?php
 
 // Definición de la clase Prueba
-class Prueba {
+class Prueba
+{
 
     private $matriz;
 
     // en el constructor se crea la matriz con un único elemento
-    function __construct() {
+    function __construct()
+    {
         $this->matriz = array("Italia" => 100);
     }
 
@@ -18,7 +20,8 @@ class Prueba {
     // Éste es sólo un ejemplo para la aplicación de métodos __get()
     // y __set()
 
-    function __get($nv) {
+    function __get($nv)
+    {
         echo "<br />Método get: " . $nv . "<br />";
 
         // Elmétodo isset() verifica si la variable está asignada
@@ -28,24 +31,28 @@ class Prueba {
             return " NO está asignada";
         }
     }
+
     // cuando se asigna un valor a una propiedad que no existe,
     // actúa el método __set(), en el argumento se recibe el 
     // nombre de la supuesta propiedad y el valor que se quiere 
     // asignar
 
-    function __set($nv, $val) {
+    function __set($nv, $val)
+    {
         echo "<br />Método set: " . $nv . ", " . $val . "<br />";
         $this->matriz[$nv] = $val;
     }
 
     // ejemplo de _isset()
-    function __isset($nv) {
+    function __isset($nv)
+    {
         echo "<br />Método _isset: " . $nv . "<br />";
         return isset($this->matriz[$nv]);
     }
 
     // ejemplo de _unset()
-    function __unset($nv) {
+    function __unset($nv)
+    {
         echo "<br />Método _unset: " . $nv . "<br />";
         unset($this->matriz[$nv]);
     }

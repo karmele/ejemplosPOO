@@ -1,4 +1,5 @@
 <?php
+
 include 'clases/Clase89.php';
 include 'vistas/cabecera.php';
 echo "Clases abstractas<br /><br />";
@@ -6,7 +7,6 @@ echo "Clases abstractas<br /><br />";
 // Clase abstracta 
 // sirve para ser derivada pero no se pueden
 // crear ejemplares de esta clase
-
 // se crea un objeto de clase MiSubClase
 // al ser una clase derivada de la clase abstracta MiClase    
 $obj = new MiSubClase();

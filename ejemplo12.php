@@ -18,12 +18,12 @@ if ($emp instanceof Empleado) {
 
 if ($emp instanceof Persona) {
     echo "pero también es de tipo Persona (por derivar de " .
-            "esta clase).<br />";
+    "esta clase).<br />";
 }
 
 if ($emp instanceof Imprimir) {
     echo "Y también es de tipo Imprimir (por implementar " .
-            "esta interfaz).<br />";
+    "esta interfaz).<br />";
 }
 include 'vistas/pie.php';
 ?>
