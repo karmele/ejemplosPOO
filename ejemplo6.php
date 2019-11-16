@@ -1,4 +1,5 @@
 <?php
+
 include 'clases/Clase6.php';
 include 'vistas/cabecera.php';
 echo "Acceso a la clase base desde la clase derivada <br />";

@@ -1,30 +1,36 @@
 <?php
 
 // Definición de la clase Prueba
-class Prueba {
+class Prueba
+{
 
     static $contador = 0;
     private $cliente;
     private $direccion;
 
-    function __construct() {
+    function __construct()
+    {
         echo "<br />Entra a construct: " . self::$contador . "<br />";
         self::$contador++;
     }
 
-    function getCliente() {
+    function getCliente()
+    {
         return $this->cliente;
     }
 
-    function getDireccion() {
+    function getDireccion()
+    {
         return $this->direccion;
     }
 
-    function setCliente($cliente) {
+    function setCliente($cliente)
+    {
         $this->cliente = $cliente;
     }
 
-    function setDireccion($direccion) {
+    function setDireccion($direccion)
+    {
         $this->direccion = $direccion;
     }
 
@@ -34,8 +40,8 @@ class Prueba {
 //        $this->cliente = "nuevo cliente";
 //        $this->direccion = "nueva dirección";
 //    }
-
 }
+
 include 'vistas/cabecera.php';
 echo "Clonación de objetos <br /><br />";
 

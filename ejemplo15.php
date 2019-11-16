@@ -1,6 +1,7 @@
 <?php
 
-class Prueba {
+class Prueba
+{
 
     public $prop1 = "valor de propiedad 1";
     public $prop2 = "valor de propiedad 2";

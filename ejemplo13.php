@@ -1,4 +1,5 @@
 <?php
+
 include 'clases/Factura.php';
 include 'vistas/cabecera.php';
 // Se crea un objeto Factura
@@ -12,20 +13,20 @@ $lin = new Linea_Detalle(6, "peras");
 //En estecaso no haría falta, pero si no se sabe 
 //si es así se agrega la línea a la factura
 if ($lin instanceof Linea_Detalle) {
-    $fac->agregar_linea($lin);  
+    $fac->agregar_linea($lin);
 }
 //Otra vez, envía un objeto Linea_Detalle
 // se crea otra linea de detalle, 
 // Como es correcto, se puede no comprobar
 $lin = new Linea_Detalle(12, "manzanas");
-$fac->agregar_linea($lin); 
+$fac->agregar_linea($lin);
 
 // obtención de todas las lineas de factura
 //$linea no está definida como un objeto Linea_Detalle
 //y Netbeans no ofrece getCantidad(), pero lo reconoce.
 echo "<u><b>contenido de las lineas de detalle </u></b><br />";
 foreach (($fac->getLineas()) as $linea) {
-    echo ("cantidad: " . $linea->getCantidad(). " unidades -  " .  //$linea no está definida como un objeto Linea_Detalle
+    echo ("cantidad: " . $linea->getCantidad() . " unidades -  " . //$linea no está definida como un objeto Linea_Detalle
     " producto: " . $linea->getProducto() . "<br />");
 }
 

@@ -1,58 +1,70 @@
 <?php
 
 // Clase
-class MiClase4 {
+class MiClase4
+{
 
     private $saludo;
 
-    function getSaludo() {
+    function getSaludo()
+    {
         return $this->saludo;
     }
 
-    function setSaludo($saludo) {
+    function setSaludo($saludo)
+    {
         $this->saludo = $saludo;
     }
 
-    function __construct() {
+    function __construct()
+    {
         echo "Se está ejecutando el constructor en la clase " .
         " MiClase<br />";
     }
 
-    function __destruct() {
+    function __destruct()
+    {
         echo "Se está destruyendo un objeto de la clase " .
         " MiClase<br />";
     }
 
-    function saludar() {
+    function saludar()
+    {
         echo $this->saludo;
     }
 
 }
 
 // Subclase o clase derivada
-class MiSubClase extends MiClase4 {
+class MiSubClase extends MiClase4
+{
 
     private $despedida;
 
-    function getDespedida() {
+    function getDespedida()
+    {
         return $this->despedida;
     }
 
-    function setDespedida($despedida) {
+    function setDespedida($despedida)
+    {
         $this->despedida = $despedida;
     }
 
-    function __construct() {
+    function __construct()
+    {
         echo "Se está ejecutando el constructor de un objeto " .
         "de la subclase MiSubClase<br />";
     }
 
-    function __destruct() {
+    function __destruct()
+    {
         echo "Se está destruyendo un objeto de la clase " .
         " MiSubClase<br />";
     }
 
-    function despedirse() {
+    function despedirse()
+    {
         echo $this->despedida . "<br />";
     }
 
@@ -70,7 +82,6 @@ $obj = new MiSubClase();
 
 // Podemos comprobar que no se produce una llamada automática 
 // al constructor de la clase base
-
 // El objeto $obj es de clase MiSubClase pero igualmente
 // puedo utilizarlo para hacer referencia a la propiedad
 // saludo y al método saludar que son de su clase base

@@ -13,7 +13,7 @@
 
     <header>
         <img src='img\logo.png' width="85" height="70" alt="El logo de Mª Ana Sanz" />
-        <h1>Ejemplos de la UT3- POO</h1>
+        <h1>Ejemplos de la UT3- POO/h1>
     </header>
 
     <nav>
