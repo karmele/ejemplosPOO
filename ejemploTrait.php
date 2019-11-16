@@ -33,7 +33,6 @@ trait Comunicacion
 
 }
 
-<<<<<<< HEAD
 class Estado
 {
 
@@ -44,21 +43,11 @@ class Estado
 
     function decirBien()
     {
-=======
-class Estado {
-
-    function decirQueTal() {
-        return "¿Qué tal? Soy Estado";
-    }
-
-    function decirBien() {
->>>>>>> bf4e4cd09e79efd42c6dddcbf91dbb0a845d1d12
         return "Bien, desde la clase Estado";
     }
 
 }
 
-<<<<<<< HEAD
 class Comunicar extends Estado
 {
 
@@ -66,21 +55,10 @@ class Comunicar extends Estado
 
     function decirQueTal()
     {
-=======
-class Comunicar extends Estado {
-
-    use Comunicacion;
-
-    function decirQueTal() {
->>>>>>> bf4e4cd09e79efd42c6dddcbf91dbb0a845d1d12
         return "¿Qué tal? Soy Comunicar";
     }
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> bf4e4cd09e79efd42c6dddcbf91dbb0a845d1d12
 include 'vistas/cabecera.php';
 $a = new Comunicar;
 echo $a->decirHolaYQuetal() . "<br>"; // Devuelve: Hola ¿Qué tal? Soy Comunicar
